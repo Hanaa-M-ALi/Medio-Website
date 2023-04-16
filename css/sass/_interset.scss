@@ -1,0 +1,29 @@
+.interset {
+  .container {
+    .interset-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      .interset-box {
+        img {
+          border-radius: 5px;
+          margin-bottom: 25px;
+        }
+        h3 a {
+          color: $bs-black;
+          display: inline-block;
+          margin-bottom: 10px;
+          font-size: 23px;
+        }
+        p {
+          color: rgba($bs-secondary, 0.7);
+          margin-bottom: 16px;
+        }
+        .link {
+          @include link-design;
+          color: rgba($bs-black, 0.7);
+        }
+      }
+    }
+  }
+}

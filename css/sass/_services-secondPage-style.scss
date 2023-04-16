@@ -1,0 +1,128 @@
+.landing {
+  height: 100vh;
+  min-height: 700px;
+  background-image: url("/images/hero-2-min.jpg");
+  background-color: aqua;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .overlay::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .container {
+    .content {
+      width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      text-align: center;
+      h1 {
+        width: 100% !important;
+        color: $bs-white;
+        font-size: 80px;
+        line-height: 1;
+        font-family: "Playfair Display", serif;
+        margin-bottom: 32px !important;
+      }
+      p {
+        color: $bs-white;
+        font-size: 22px;
+        margin-bottom: 22px;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          @include button;
+          background-color: transparent;
+          border: 3px solid $bs-white;
+          font-size: 16px;
+          margin-right: 25px;
+          transition: 0.3s;
+          &:hover {
+            background-color: $bs-white;
+            color: $bs-black;
+            border-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+//=======medium media==========
+@include small-device {
+  .landing {
+    .container {
+      .content {
+        h1 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+//=========mobile media========
+@include mobile-device {
+  .landing {
+    .container {
+      .content {
+        h1 {
+          font-size: 38px;
+        }
+        p {
+          font-size: 18px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+//=====================services style====================
+.services {
+  background-color: $bs-white !important;
+  .section-title {
+    text-align: center;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    .service-box {
+      display: flex;
+      margin-bottom: 48px;
+      padding-left: 10px;
+      span i {
+        padding-right: 15px;
+        font-size: 30px;
+      }
+      .service-content {
+        padding-left: 10px;
+        h3 {
+          margin-bottom: 8px;
+        }
+        p {
+          color: rgba($bs-secondary, 0.7);
+          margin-bottom: 16px;
+        }
+        .link {
+          @include link-design;
+          color: rgba($bs-black, 0.7);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.subscribe {
+  position: relative;
+  margin-top: -220px !important;
+  z-index: 55;
+  .container {
+    background-color: $background-section;
+    form {
+      display: block !important;
+      .input-text {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+      .name,
+      .email {
+        padding: 20px;
+        background-color: transparent;
+        border-bottom: 1px solid $bs-link;
+        width: 49%;
+        &::placeholder {
+          font-size: 17px;
+        }
+      }
+      textarea {
+        display: block;
+        padding: 20px;
+        background-color: transparent;
+        border-bottom: 1px solid $bs-link;
+        margin-bottom: 32px;
+        height: 209px;
+        width: 100%;
+        &::placeholder {
+          font-size: 17px;
+          font-family: "Roboto", sans-serif;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.subscribe {
+  .container {
+    height: auto;
+    background-color: $background-section;
+    padding: 120px 40px;
+    h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: rgba($bs-secondary, 0.7);
+      margin-bottom: 16px;
+    }
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      align-items: center;
+      gap: 20px;
+      .name,
+      .email {
+        padding: 20px;
+        background-color: transparent;
+        border-bottom: 1px solid $bs-link;
+        &::placeholder {
+          font-size: 17px;
+        }
+      }
+      .submit-button {
+        padding: 20px 40px !important;
+        width: fit-content;
+        @include button;
+      }
+    }
+  }
+}
+
+// ======mobile media=====
+@include mobile-device {
+  .subscribe {
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}

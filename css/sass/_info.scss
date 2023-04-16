@@ -1,0 +1,52 @@
+.info {
+  padding-top: 112px;
+  padding-bottom: 112px;
+  background-color: $background-section;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    .info-box {
+      background-color: $bs-white;
+      transition: transform 0.4s;
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 10px 10px 8px 5px $bs-shadow, -10px 0 8px 5px $bs-shadow;
+      }
+      img {
+        background-color: $bs-white;
+        filter: grayscale(100%);
+      }
+      &:hover img {
+        filter: grayscale(0);
+      }
+      .info-text {
+        padding: 30px 25px;
+        position: relative;
+        overflow: hidden;
+        h3 {
+          font-size: 20px;
+          font-weight: 400;
+          margin-bottom: 20px;
+        }
+        p {
+          color: $bs-gray-dark;
+          margin-bottom: 20px;
+        }
+        .link {
+          @include link-design;
+        }
+      }
+    }
+  }
+}
+
+// =======small media=========
+@include small-device {
+  .info {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+  }
+}

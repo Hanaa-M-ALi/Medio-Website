@@ -1,0 +1,54 @@
+.testimonials {
+  .container {
+    .testimonials-content {
+      display: flex;
+      gap: 30px;
+      color: $bs-white;
+      .testimonials-box {
+        background-color: $bs-testimonials;
+        padding: 30px;
+        .qoute {
+          font-size: 25px;
+          font-weight: normal;
+          display: inline-block;
+          margin-bottom: 30px;
+        }
+        P {
+          font-size: 20px;
+          margin-bottom: 40px;
+        }
+        .testimonilas-detelais {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          img {
+            width: 60px;
+            max-width: 100%;
+            border-radius: 50%;
+          }
+          .testimonials-info {
+            h2 {
+              font-size: 16px;
+              margin-bottom: 8px;
+            }
+            span {
+              color: rgba($bs-white, 0.4);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//========moblie media======
+@include mobile-device {
+  .testimonials {
+    .testimonials-content {
+      .testimonials-box {
+        &.second {
+          display: none;
+        }
+      }
+    }
+  }
+}

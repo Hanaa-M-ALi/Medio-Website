@@ -1,0 +1,60 @@
+.website {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    .section-title {
+      flex-basis: auto;
+      width: 33.33%;
+      max-width: 100%;
+      padding-right: 50px;
+      p {
+        color: $bs-secondary;
+        margin-bottom: 20px;
+      }
+      button {
+        @include button;
+        margin-top: 15px;
+      }
+    }
+    .website-imgs {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+      width: 66.66%;
+      max-width: 100%;
+      .img-one,
+      .img-two {
+        width: 50%;
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        img {
+          border-radius: 5px;
+        }
+      }
+      .img-one {
+        margin-top: 48px;
+      }
+    }
+  }
+}
+
+// =======medium media==========
+@include small-device {
+  .website {
+    .container {
+      flex-direction: column;
+      .section-title {
+        width: 100%;
+        max-width: 100%;
+        h2 {
+          font-size: 25px;
+        }
+      }
+      .website-imgs {
+        width: 100%;
+      }
+    }
+  }
+}

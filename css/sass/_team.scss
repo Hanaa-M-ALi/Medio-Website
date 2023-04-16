@@ -1,0 +1,34 @@
+section {
+  .team-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 45px;
+    .team-box {
+      img {
+        filter: grayscale(100%);
+        margin-bottom: 25px;
+        transition: filter 0.4s ease;
+      }
+      .team-info {
+        span {
+          font-size: 12px;
+          font-weight: 700;
+          color: $bs-gray-dark;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          display: inline-block;
+          margin-bottom: 5px;
+        }
+        h3 {
+          margin-bottom: 10px;
+        }
+        p {
+          color: rgba($bs-secondary, 0.7);
+        }
+      }
+      &:hover img {
+        filter: grayscale(0);
+      }
+    }
+  }
+}

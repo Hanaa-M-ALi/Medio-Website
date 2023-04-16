@@ -1,0 +1,55 @@
+@mixin button($textColor: $bs-white, $backgroundColor: $bs-button) {
+  background: $backgroundColor;
+  color: $textColor;
+  padding: 14px 30px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: transparent;
+    color: $bs-dark;
+    border-color: $bs-dark;
+  }
+}
+@mixin link-design {
+  color: $bs-black;
+  padding-bottom: 10px;
+  position: relative;
+  transition: left 0.4s;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: $bs-link;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: 0px;
+    transition: width 0.4s linear;
+  }
+  &:hover::after {
+    width: 100%;
+    background-color: $bs-black;
+  }
+}
+
+@mixin small-device {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin mobile-device {
+  @media (max-width: 767px) {
+    @content;
+  }
+}

@@ -1,0 +1,54 @@
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+section {
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+.section-title {
+  margin-bottom: 48px;
+  & > span {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 16px;
+    color: #4d4d4d;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  & > h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
